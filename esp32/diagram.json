@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Proyecto evaluacionFinal",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic",
+      "top": -113.7,
+      "left": 187.9,
+      "attrs": { "distance": "100" }
+    },
+    { "type": "wokwi-led", "id": "ledV", "top": 150, "left": 250, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "ledR", "top": 150, "left": 320, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "rV",
+      "top": 110,
+      "left": 230,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rR",
+      "top": 110,
+      "left": 300,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:5V", "ultrasonic:VCC", "red", [] ],
+    [ "esp:GND.1", "ultrasonic:GND", "black", [] ],
+    [ "esp:5", "ultrasonic:TRIG", "green", [] ],
+    [ "esp:18", "ultrasonic:ECHO", "orange", [] ],
+    [ "esp:26", "rV:1", "green", [] ],
+    [ "rV:2", "ledV:A", "green", [] ],
+    [ "ledV:C", "esp:GND.2", "black", [] ],
+    [ "esp:33", "rR:1", "red", [] ],
+    [ "rR:2", "ledR:A", "red", [] ],
+    [ "ledR:C", "esp:GND.2", "black", [] ]
+  ],
+  "dependencies": {}
+}

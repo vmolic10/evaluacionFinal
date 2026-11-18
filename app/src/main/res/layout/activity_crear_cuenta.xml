@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    android:background="#FFFFFF"
+    tools:context=".CrearCuenta">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Cuenta"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/tvrutcrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese RUT"
+        android:inputType="text"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/tvnomcrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese Nombre"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/tvapecrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese Apellido"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/tvcorrcrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese Correo"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/tvconcrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese Contraseña"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnreg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/btnvol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver al inicio" />
+
+</LinearLayout>
