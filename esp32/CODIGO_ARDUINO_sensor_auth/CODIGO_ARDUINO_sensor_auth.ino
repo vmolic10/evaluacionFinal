@@ -1,19 +1,4 @@
-// Verificador de funcionamiento del sensor HC-SR04 con ESP32 + Firebase (versión segura)
-//
-// - Mide la distancia y detecta cuándo el sensor "actúa" (objeto cerca).
-// - Revisa que el sensor funcione bien (si no recibe eco, informa FALLA).
-// - Se autentica en Firebase con su propia cuenta (correo y contraseña), igual que los usuarios
-// de la app, y envía el estado a Firebase. Las reglas de la base de datos solo dejan entrar
-// a usuarios autenticados.
-// - Lee el interruptor ON/OFF que manda la app.
-//
-// No necesita librerías externas.
-//
-// MODO_WOKWI = 1 -> simulador Wokwi (WiFi "Wokwi-GUEST")
-// MODO_WOKWI = 0 -> placa real (pon tu WiFi abajo)
-//
-// IMPORTANTE: no subas a GitHub tu WiFi, la clave de API ni la contraseña del ESP32.
-// Deja los textos de ejemplo en el archivo que subas.
+
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <HTTPClient.h>
